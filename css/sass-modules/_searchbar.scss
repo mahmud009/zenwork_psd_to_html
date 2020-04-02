@@ -9,6 +9,16 @@
   width: 50px;
   border-radius: 30px;
   overflow: hidden;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 9;
+  @include md {
+    position: relative;
+    bottom: inherit;
+    right: inherit;
+  }
+
   ::placeholder {
     color: $color-white;
   }
@@ -50,7 +60,10 @@
 }
 
 .searchbar:hover {
-  width: 400px;
+  width: 200px;
+  @include lg {
+    width: 400px;
+  }
 
   .search_input {
     transform: scaleX(1);

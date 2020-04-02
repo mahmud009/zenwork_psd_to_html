@@ -101,13 +101,19 @@
   margin-top: 5rem;
 
   @include lg {
+    margin-top: 80px;
+  }
+
+  @include xl {
+    margin-top: 100px;
+  }
+  @include xxl {
+    margin-bottom: 0;
     margin-top: 0;
   }
 }
 .sec-img {
   position: relative;
-  left: 0;
-  top: 0;
   padding: 0;
 }
 
@@ -117,11 +123,11 @@
 
 .card-cnt {
   background-color: rgba(red(#fff), green(#fff), blue(#fff), 0.4);
-  border-radius: 4px;
+  border-radius: 5px;
   padding: 30px;
   width: 90%;
   margin-top: -3rem;
-  @include box-shadow;
+  box-shadow: 0px 31px 38px rgba(250, 120, 117, 0.1);
 
   @include sm {
     padding: 30px;
@@ -158,5 +164,221 @@
   p {
     margin-top: 1.4rem;
     margin-bottom: 2rem;
+  }
+}
+
+.cnt-left {
+  .sec-img {
+    z-index: -1;
+  }
+}
+
+.cnt-left .card-cnt {
+  @include sm {
+    padding: 30px;
+    margin-right: 0;
+    margin-top: -60px;
+    width: 70%;
+  }
+  @include md {
+    padding: 30px;
+    margin-top: 150px;
+    margin-right: -140px;
+    width: 100%;
+  }
+  @include lg {
+    padding: 50px;
+    margin-top: 0;
+  }
+
+  @include xl {
+    padding: 60px;
+    margin-right: -65px;
+  }
+  @include xxl {
+    padding: 80px;
+    width: 90%;
+    margin-right: -150px;
+  }
+
+  h3 {
+    @include lg {
+      width: 50%;
+    }
+  }
+}
+
+//Circular section
+
+.circular-sec {
+  background-image: url(../images/card-bottom.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include md {
+    margin-top: 110px;
+  }
+
+  @include lg {
+    margin-top: 90px;
+  }
+
+  @include xl {
+    margin-top: 150px;
+  }
+}
+
+.cir-cnt {
+  padding-left: 60px;
+  padding-right: 60px;
+
+  @include sm {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  @include md {
+    margin-left: 0;
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+  @include lg {
+    margin-left: 80px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include xl {
+    margin-left: 130px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: $color-white;
+    font-weight: 700;
+
+    @include lg {
+      width: 100%;
+    }
+    @include xl {
+      width: 80%;
+    }
+  }
+  p {
+    font-size: 1.05rem;
+    line-height: 1.5rem;
+    font-weight: 200;
+    color: $color-white;
+    margin-bottom: 0;
+    margin-top: 1rem;
+  }
+}
+
+.cir-form {
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 1.5rem;
+
+  @include md {
+    margin-right: 0;
+  }
+  @include lg {
+    margin-right: 80px;
+  }
+
+  @include xl {
+    margin-right: 130px;
+  }
+
+  input {
+    box-shadow: 0px 18px 35px rgba(0, 0, 0, 0.25);
+  }
+}
+
+//footer customize
+footer {
+  padding-top: 6.5rem;
+  padding-bottom: 4rem;
+
+  .container {
+    @include lg {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+  }
+}
+
+.ftr-about {
+  p {
+    margin: 0;
+  }
+  .ftr-about-txt {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .ftr-copy {
+    font-size: 1rem;
+  }
+}
+
+.ftr-nav {
+  max-height: fit-content;
+
+  li {
+    margin-bottom: 0.5rem;
+  }
+  a {
+    color: $font-purple;
+    font-size: 0.9rem;
+    transition: all 0.4s ease;
+  }
+  a:hover {
+    color: $accent;
+    text-decoration: none;
+  }
+}
+
+.ftr-social {
+  max-height: fit-content;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  @include md {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  li {
+    display: inline-block;
+    margin-right: 5px;
+    background-color: $purple-dark;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: center;
+    transition: all 0.4s ease;
+  }
+
+  a {
+    font-size: 1.1rem;
+    line-height: 2.5rem;
+    color: $color-white;
+    display: block;
+  }
+  li:hover {
+    background-color: lighten($purple-dark, 20%);
   }
 }

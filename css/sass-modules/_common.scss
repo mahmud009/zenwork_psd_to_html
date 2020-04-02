@@ -43,8 +43,8 @@ p {
   color: $font-secondary;
   opacity: 0.9;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 2rem;
+  font-size: 1.025rem;
+  line-height: calc(1.025rem * 2);
 }
 
 button,
@@ -72,8 +72,8 @@ a {
   a:after {
     content: "";
     position: absolute;
-    width: 8px;
-    height: 3px;
+    width: 6px;
+    height: 2px;
     background-color: $accent;
     top: 50%;
     right: 20px;
@@ -121,7 +121,7 @@ input[type="email"] {
   @include box-shadow;
 
   @include lg {
-    padding: 15px 30px;
+    padding: 12px 30px;
   }
 }
 
@@ -149,7 +149,7 @@ button {
 
   @include sm {
     margin-top: 0;
-    margin-left: 10px;
+    margin-left: 15px;
   }
   @include lg {
     padding: 12px 25px;
@@ -158,11 +158,48 @@ button {
 
 input[type="submit"]:hover,
 button:hover {
-  background-color: darken($accent, 70%);
+  background-color: rgb(12, 8, 255);
 }
 
 input[type="submit"]:focus,
 button:focus,
 input:focus {
   outline: none;
+}
+
+.ftr-bg-1,
+.ftr-bg-2 {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.ftr-bg-1 {
+  left: 0;
+}
+
+.ftr-bg-2 {
+  right: 0;
+}
+
+.scr-top {
+  @include gradient-top;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 8rem;
+  right: 3rem;
+  text-align: center;
+
+  @include lg {
+    bottom: 100px;
+    right: 100px;
+  }
+
+  a {
+    display: block;
+    color: $color-white;
+    line-height: 50px;
+  }
 }
