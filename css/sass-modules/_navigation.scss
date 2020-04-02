@@ -1,0 +1,133 @@
+// Navbar customize
+header {
+  height: 80px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.zen-logo {
+  img {
+    position: relative;
+    width: 140px;
+    z-index: 99;
+  }
+}
+
+.navbar-custom {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nv-toggle {
+    width: 18px;
+    height: 16px;
+    position: relative;
+    cursor: pointer;
+    margin-left: 20px;
+    z-index: 999999;
+
+    span {
+      width: 100%;
+      height: 2px;
+      border-radius: 3px;
+      background-color: $color-white;
+      transition: all 0.4s ease;
+      position: absolute;
+    }
+    span:nth-child(1) {
+      top: 0;
+    }
+    span:nth-child(2) {
+      width: 70%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    span:nth-child(3) {
+      bottom: 0;
+    }
+  }
+}
+
+.tg-open {
+}
+
+.tg-open .nv-toggle {
+  z-index: 999999;
+  span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+  span:nth-child(2) {
+    opacity: 0;
+  }
+  span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+  }
+}
+
+.navbar-cs-collapse {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: 0.5s;
+  transition-timing-function: cubic-bezier(0.83, 0, 0.17, 1);
+  background: linear-gradient(
+    45deg,
+    rgba(red($purple), green($purple), blue($purple), 0.8) 0%,
+    rgba(red($accent), green($accent), blue($accent), 0.8) 100%
+  );
+  backdrop-filter: blur(8px);
+  overflow-x: hidden;
+
+  ul {
+    list-style-type: none;
+    li {
+      margin: 0;
+      margin-bottom: 12px;
+      position: relative;
+      transition: all 0.5s ease;
+
+      a {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: $color-white;
+        text-transform: capitalize;
+      }
+    }
+    li:after {
+      content: "";
+      background-color: $purple-dark;
+      width: 0;
+      height: 3px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: all 0.5s ease;
+    }
+
+    li:hover:after {
+      width: 60%;
+    }
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.nav-opened {
+  transform: translateY(0);
+}

@@ -1,0 +1,91 @@
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Inter', sans-serif;
+
+//Keyframes declaration
+
+//General Styling
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+}
+
+.row {
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  color: $font-purple;
+}
+
+p {
+  color: $font-secondary;
+  opacity: 0.9;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 25px;
+
+  @include md {
+    font-size: 14px;
+    line-height: 32px;
+  }
+
+  @include lg {
+    font-size: 17px;
+    line-height: 32px;
+  }
+}
+
+button,
+input[type="submit"],
+a {
+  font-family: "Poppins", sans-serif !important;
+}
+
+input[type="email"] {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  padding: 15px 40px;
+  border-radius: 3px;
+  border: none;
+  @include box-shadow;
+}
+
+input[type="submit"],
+button {
+  @include gradient-def;
+  border: none;
+  color: $color-white;
+  font-size: 16px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  transition: 0.4s ease;
+  transition-property: color;
+  margin-left: 15px;
+  border-radius: 3px;
+  @include button-shadow;
+}
+
+input[type="submit"]:hover,
+button:hover {
+  color: $font-purple;
+}
+
+input[type="submit"]:focus,
+button:focus,
+input:focus {
+  outline: none;
+}
