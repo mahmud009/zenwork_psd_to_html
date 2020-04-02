@@ -12,6 +12,14 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 80%;
+
+  @include md {
+    font-size: 90%;
+  }
+  @include lg {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -35,53 +43,122 @@ p {
   color: $font-secondary;
   opacity: 0.9;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 25px;
-
-  @include md {
-    font-size: 14px;
-    line-height: 32px;
-  }
-
-  @include lg {
-    font-size: 17px;
-    line-height: 32px;
-  }
+  font-size: 1rem;
+  line-height: 2rem;
 }
 
 button,
 input[type="submit"],
 a {
   font-family: "Poppins", sans-serif !important;
+  font-size: 1rem;
+}
+
+.zen-sec {
+  a {
+    font-family: "Poppins", sans-serif !important;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: $accent;
+    position: relative;
+    text-decoration: none !important;
+    transition: all 0.4s ease;
+    span {
+      margin-left: 20px;
+      transition: all 0.25s ease;
+    }
+  }
+
+  a:after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 3px;
+    background-color: $accent;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-75%);
+    transition: all 0.4s ease;
+  }
+
+  a:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: $font-purple;
+    top: 50%;
+    left: 0;
+    transform: translateY(-75%);
+    transition: all 0.3s;
+    transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  }
+
+  a:hover {
+    color: $accent;
+    margin-left: 15px;
+    span {
+      margin-left: 25px;
+    }
+  }
+
+  a:hover:before {
+    width: 100px;
+  }
+
+  a:hover:after {
+    right: 20px;
+    width: 3px;
+  }
 }
 
 input[type="email"] {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
-  padding: 15px 40px;
-  border-radius: 3px;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border-radius: 4px;
   border: none;
   @include box-shadow;
+
+  @include lg {
+    padding: 15px 30px;
+  }
 }
 
 input[type="submit"],
 button {
-  @include gradient-def;
   border: none;
   color: $color-white;
-  font-size: 16px;
-  padding: 15px 30px;
+  font-size: 1rem;
+  padding: 10px 20px;
   border-radius: 5px;
-  transition: 0.4s ease;
-  transition-property: color;
-  margin-left: 15px;
-  border-radius: 3px;
+  transition-duration: 0.4s !important;
+  transition-timing-function: ease !important;
+  transition-property: background-color !important;
+  margin-top: 0.8rem;
+  margin-left: 0px;
+  border-radius: 4px;
+  position: relative;
+  background-color: $accent;
+  background: linear-gradient(
+    45deg,
+    rgba(red($purple), green($purple), blue($purple), 0.9) 0%,
+    rgba(red($accent), green($accent), blue($accent), 0.9) 100%
+  );
   @include button-shadow;
+
+  @include sm {
+    margin-top: 0;
+    margin-left: 10px;
+  }
+  @include lg {
+    padding: 12px 25px;
+  }
 }
 
 input[type="submit"]:hover,
 button:hover {
-  color: $font-purple;
+  background-color: darken($accent, 70%);
 }
 
 input[type="submit"]:focus,

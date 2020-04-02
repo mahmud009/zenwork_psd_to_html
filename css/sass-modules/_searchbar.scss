@@ -28,6 +28,7 @@
   }
   .search_icon {
     position: absolute;
+    margin-top: 0;
     margin-left: 0;
     right: 0;
     @include gradient-top;

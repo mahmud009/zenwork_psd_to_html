@@ -8,69 +8,155 @@
 // Banner section customize
 .bnr {
   position: relative;
-  min-height: 880px;
+  min-height: 600px;
+  background-image: url(../images/bnr-left.png);
+  background-repeat: no-repeat;
+  background-position-y: 50%;
+
+  @include sm {
+    min-height: 600px;
+  }
+  @include md {
+    min-height: 500px;
+  }
+  @include lg {
+    min-height: 650px;
+  }
+  @include xxl {
+    min-height: 750px;
+  }
 }
 
 .bnr-inr-wrp {
   width: 100%;
   height: 100%;
+
+  @include xxl {
+  }
 }
 
 .bnr-cnt {
-  margin-left: 75px;
+  margin-left: 0;
+
+  @include md {
+    margin-left: 20px;
+  }
+  @include xxl {
+    margin-left: 75px;
+  }
   h1 {
-    font-size: 42px;
-    line-height: 55px;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
     font-weight: 700;
+
     span {
-      display: block;
+      display: inline-block;
+      @include xxl {
+        display: block;
+      }
+    }
+
+    @include md {
+    }
+    @include lg {
+    }
+
+    @include xl {
     }
   }
 
   p {
-    line-height: 35px;
-    margin-top: 30px;
-    margin-bottom: 70px;
+    line-height: 2.2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 
   .bnr-form-title {
     font-weight: 500;
   }
   form {
-    margin-top: 40px;
+    margin-top: 1.5rem;
   }
 }
 
 .bnr .bnr-img {
+  width: 70%;
   position: absolute;
-  z-index: -1;
-  right: 0;
   top: 0;
+  right: 0;
+  z-index: -1;
 
-  img {
-    width: 300px;
-    @include sm {
-      width: 450px;
-    }
-    @include md {
-      width: 400px;
-    }
-    @include lg {
-      width: 650px;
-    }
-    @include xl {
-      width: 750px;
-    }
-    @include xxl {
-      width: 870px;
-    }
+  @include sm {
+    width: 60%;
+  }
+  @include xxxl {
+    width: 55%;
+  }
+}
 
-    @include xxxl {
-      width: 950px;
-    }
+// Child section customization
 
-    @include xxxxl {
-      width: 1050px;
-    }
+.zen-sec {
+  padding: 0;
+  margin-top: 5rem;
+
+  @include lg {
+    margin-top: 0;
+  }
+}
+.sec-img {
+  position: relative;
+  left: 0;
+  top: 0;
+  padding: 0;
+}
+
+.card-cnt-wrap {
+  position: relative;
+}
+
+.card-cnt {
+  background-color: rgba(red(#fff), green(#fff), blue(#fff), 0.4);
+  border-radius: 4px;
+  padding: 30px;
+  width: 90%;
+  margin-top: -3rem;
+  @include box-shadow;
+
+  @include sm {
+    padding: 30px;
+    margin-left: 0;
+    margin-top: -60px;
+    width: 70%;
+  }
+  @include md {
+    padding: 30px;
+    margin-top: 150px;
+    margin-left: -65px;
+    width: 100%;
+  }
+  @include lg {
+    padding: 50px;
+    margin-top: 0;
+  }
+
+  @include xl {
+    padding: 60px;
+    margin-left: -65px;
+  }
+  @include xxl {
+    padding: 80px;
+    width: 90%;
+    margin-left: -150px;
+  }
+
+  h3 {
+    font-size: 1.7rem;
+    font-weight: bold;
+  }
+
+  p {
+    margin-top: 1.4rem;
+    margin-bottom: 2rem;
   }
 }

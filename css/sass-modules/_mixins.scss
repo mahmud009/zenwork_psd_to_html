@@ -31,13 +31,7 @@
 }
 
 @mixin xxxl {
-  @media (min-width: 1660px) {
-    @content;
-  }
-}
-
-@mixin xxxxl {
-  @media (min-width: 1700px) {
+  @media (min-width: 1650px) {
     @content;
   }
 }
@@ -51,9 +45,9 @@
 }
 
 @mixin box-shadow {
-  box-shadow: -15px 15px 35px rgba(250, 120, 117, 0.25);
+  box-shadow: 0px 18px 35px rgba(250, 120, 117, 0.25);
 }
 
 @mixin button-shadow {
-  box-shadow: 0 18px 35px rgba(250, 120, 117, 0.42);
+  box-shadow: 0 18px 35px rgba(250, 120, 117, 0.25);
 }

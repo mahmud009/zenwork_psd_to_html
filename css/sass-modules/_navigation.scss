@@ -5,6 +5,12 @@ header {
   position: absolute;
   top: 0;
   left: 0;
+
+  @include xxl {
+    .container {
+      max-width: 73%;
+    }
+  }
 }
 
 .zen-logo {
@@ -50,9 +56,6 @@ header {
       bottom: 0;
     }
   }
-}
-
-.tg-open {
 }
 
 .tg-open .nv-toggle {
