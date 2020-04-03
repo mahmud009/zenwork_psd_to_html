@@ -1,3 +1,78 @@
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999999999999999;
+  background-color: #ffffff;
+}
+
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #fa7875;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #34305a;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #455a64;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
 header {
   height: 80px;
   width: 100%;
@@ -174,9 +249,9 @@ header {
   position: relative;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  height: 50px;
-  width: 50px;
-  border-radius: 30px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 2rem;
   overflow: hidden;
   position: fixed;
   bottom: 3rem;
@@ -213,9 +288,9 @@ header {
   border: none;
   width: 100%;
   height: 100%;
-  font-size: 14px;
-  margin-right: 50px;
-  padding-left: 30px;
+  font-size: 0.9rem;
+  margin-right: 3rem;
+  padding-left: 2.2rem;
   line-height: 100%;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
@@ -235,8 +310,8 @@ header {
   border: none;
   border-radius: 50%;
   color: #ffffff;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   text-align: center;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -253,16 +328,16 @@ header {
 }
 
 .searchbar .search_icon i {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 .searchbar:hover {
-  width: 200px;
+  width: 18rem;
 }
 
 @media (min-width: 992px) {
   .searchbar:hover {
-    width: 400px;
+    width: 25rem;
   }
 }
 
@@ -290,7 +365,6 @@ header {
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 80%;
 }
 
@@ -485,15 +559,17 @@ input:focus {
 }
 
 .scr-top {
-  background: -webkit-gradient(linear, left bottom, left top, from(#c36571), to(#fa7875));
-  background: linear-gradient(to top, #c36571 0%, #fa7875 100%);
-  width: 50px;
-  height: 50px;
+  background: linear-gradient(45deg, rgba(195, 101, 113, 0.9) 0%, rgba(250, 120, 117, 0.9) 100%);
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   position: fixed;
-  bottom: 8rem;
+  bottom: 10rem;
   right: 3rem;
   text-align: center;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -503,10 +579,14 @@ input:focus {
   }
 }
 
-.scr-top a {
+.scr-top i {
   display: block;
   color: #ffffff;
-  line-height: 50px;
+  line-height: 3rem;
+}
+
+.scr-top:hover {
+  background-color: #0c08ff;
 }
 
 .bnr {
@@ -537,7 +617,7 @@ input:focus {
 
 @media (min-width: 1520px) {
   .bnr {
-    min-height: 750px;
+    min-height: 810px;
   }
 }
 

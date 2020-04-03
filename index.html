@@ -10,18 +10,16 @@
     <!--External stylesheet and others-->
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Inter:400,600,700,800&display=swap" rel="stylesheet">
-
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
     <!--External stylesheet and others-->
 
 
 
     <!--Local stylesheet and others-->
-    <link rel="icon" href="images/human-1.png">
+    <link rel="icon" href="images/faviocn.png">
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="plugins/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <link rel="stylesheet" href="plugins/scrollyjs/cssanimation.min.css">
     <link rel="stylesheet" href="css/style.css">
     <!--Local stylesheet and others-->
 </head>
@@ -30,9 +28,9 @@
 <body>
 
     <!-- Preloader-->
-    <!-- <div id="preloader">
+    <div id="preloader">
         <div id="loader"></div>
-    </div> -->
+    </div>
     <!--Preloader -->
 
 
@@ -86,9 +84,13 @@
             <div
                 class="bnr-inr-wrp row align-items-end align-items-lg-center align-items-xl-center col-10 col-sm-9 col-md-7 col-lg-6 col-xl-6 text-center text-md-left">
                 <div class="bnr-cnt">
-                    <h1 class="pr-md-3">How to Work From Home and
+                    <h1 class="pr-md-3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"
+                        data-aos-offset="100">How to
+                        Work
+                        From Home and
                         <span>Get Stuff Done</span></h1>
-                    <p>An ever-increasing number of contractors and full-time
+                    <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" data-aos-offset="100">An
+                        ever-increasing number of contractors and full-time
                         employees
                         are
                         working
@@ -96,8 +98,10 @@
                         home — or
                         daydreaming about working from home.</p>
 
-                    <p class="bnr-form-title mb-2">Sign up now to receive our daily tips</p>
-                    <form action="">
+                    <p class="bnr-form-title mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900"
+                        data-aos-offset="100">Sign up now to receive our daily tips</p>
+                    <form action="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"
+                        data-aos-offset="100">
                         <input type="email" placeholder="email address">
                         <input type="submit" value="Sign up">
                     </form>
@@ -105,7 +109,7 @@
             </div>
         </div>
 
-        <div class="bnr-img">
+        <div class="bnr-img" data-scrolly-down="fadeIn, duration : 2s">
             <img src="images/bnr-img.png" alt="banner" class="img-fluid">
         </div>
     </section>
@@ -122,7 +126,7 @@
 
         <div
             class="card-cnt-wrap col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center text-center text-md-left">
-            <div class="card-cnt">
+            <div class="card-cnt" data-scrolly-down="blurIn" data-scrolly-top="blurIn">
                 <h3>Create Some Space</h3>
                 <p>
                     Designate a workspace at home for those late nights. This can be anywhere you have access to
@@ -148,7 +152,7 @@
         class="zen-sec cnt-left row align-items-end align-items-sm-end align-items-md-start align-items-lg-center justify-content-end flex-column-reverse flex-md-row flex-lg-row">
         <div
             class="card-cnt-wrap col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center text-center text-md-left">
-            <div class="card-cnt">
+            <div class="card-cnt" data-scrolly-down="blurIn" data-scrolly-top="blurIn">
                 <h3>Stay Focused on Work</h3>
                 <p>
                     In addition to your workload, you probably also have a to-do list that includes going grocery
@@ -178,7 +182,7 @@
 
         <div
             class="card-cnt-wrap col-12 col-sm-12 col-md-6 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center text-center text-md-left">
-            <div class="card-cnt">
+            <div class="card-cnt" data-scrolly-down="blurIn" data-scrolly-top="blurIn">
                 <h3>Quit Multitasking</h3>
                 <p>
                     On a similar note, don’t try to fit in the fun stuff on an evening or weekend when you need to be
@@ -202,8 +206,9 @@
     <!--Circular section-->
     <div class="container">
 
-        <div
-            class="circular-sec row justify-content-center justify-content-lg-between align-items-center flex-column flex-lg-row text-center text-lg-left">
+        <div class="circular-sec row justify-content-center justify-content-lg-between align-items-center flex-column flex-lg-row text-center text-lg-left"
+            data-scrolly-offset-bottom="100px" data-scrolly-down="blurInTop" data-scrolly-top="blurInBottom"
+            data-scrolly-offset-top="100px">
 
             <div class="cir-cnt col-12 col-md-12 col-lg-4">
                 <h2>Remote jobs
@@ -268,8 +273,8 @@
         </div>
     </footer>
 
-    <div class="scr-top">
-        <a href="#"><i class="fas fa-arrow-up"></i></a>
+    <div class="scr-top cssanimation hu__hu__">
+        <i class="fas fa-arrow-up"></i>
     </div>
 
     <img src="images/footer-left.png" alt="footer" class="ftr-bg-1 img-fluid">
@@ -287,17 +292,15 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax.js/1.5.0/parallax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.counterup/1.0/jquery.counterup.min.js"></script>
+
+
     <!--External Scripts-->
 
 
     <!--Local scripts-->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script src="plugins/stickyjs/jquery.sticky.js"></script>
-    <script src="plugins/slick/slick.min.js"></script>
-    <script src="plugins/scroll-lock/scroll-lock.min.js"></script>
+    <script src="plugins/nicescroll/jquery.nicescroll.min.js"></script>
+    <script src="plugins/scrollyjs/scrolly.min.js"></script>
     <script src="js/main.js"></script>
     <!--Local scripts-->
 

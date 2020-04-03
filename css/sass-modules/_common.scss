@@ -1,8 +1,6 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: 'Inter', sans-serif;
 
-//Keyframes declaration
-
 //General Styling
 * {
   margin: 0;
@@ -11,7 +9,6 @@
 }
 
 html {
-  scroll-behavior: smooth;
   font-size: 80%;
 
   @include md {
@@ -183,23 +180,32 @@ input:focus {
 }
 
 .scr-top {
-  @include gradient-top;
-  width: 50px;
-  height: 50px;
+  background: linear-gradient(
+    45deg,
+    rgba(red($purple), green($purple), blue($purple), 0.9) 0%,
+    rgba(red($accent), green($accent), blue($accent), 0.9) 100%
+  );
+  width: 3rem;
+  height: 3rem;
   border-radius: 50%;
   position: fixed;
-  bottom: 8rem;
+  bottom: 10rem;
   right: 3rem;
   text-align: center;
-
+  transition: all 0.4s ease;
+  cursor: pointer;
   @include lg {
     bottom: 100px;
     right: 100px;
   }
 
-  a {
+  i {
     display: block;
     color: $color-white;
-    line-height: 50px;
+    line-height: 3rem;
   }
+}
+
+.scr-top:hover {
+  background-color: rgb(12, 8, 255);
 }
